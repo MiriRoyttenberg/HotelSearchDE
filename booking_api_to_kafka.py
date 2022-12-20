@@ -26,4 +26,4 @@ for row in dest_id_arr:
         time.sleep(1)
         producer = KafkaProducer(bootstrap_servers=c.bootstrapServers)
         producer.send(topic=c.topic1, value=json.dumps(row_h).encode('utf-8'))
-        producer.send(topic=c.topic2, value=json.dumps(row).encode('utf-8'))
+        producer.send(topic=c.topic2, value=json.dumps(row_h).encode('utf-8'))
